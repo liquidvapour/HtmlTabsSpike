@@ -10,5 +10,9 @@
     {
         "title": "Tab 3",
         "content": "Tab 3 Content"
+    },
+    {
+        "title": "Tab 4",
+        "content": "The quick brown fox jumped over the lazy dog"
     }
 ]
