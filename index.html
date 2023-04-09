@@ -15,24 +15,32 @@
       }
 
       .tab-link {
+        font-family: Arial, Helvetica, sans-serif;
         display: flex;
         align-items: flex-start;
         padding: 4px;
         cursor: pointer;
         background-color: #eee;
+        border-top: 1px solid #000;
         border-right: 1px solid #000;
         border-left: 1px solid #000;
         border-bottom: 2px solid #000;
         height: 20px;
-        transition: height 0.25s ease-in-out, background-color 0.033s ease-in-out;
+        transition: 
+          height 0.4s cubic-bezier(0.34, -0.29, 0.67, 1.45), 
+          background-color 0.4s ease-out,
+          border-color 0.4s ease-out;
       }
 
       .tab-link.active {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
         background-color: #e8e822;
+        border-top: 1px solid #000;
         border-bottom: 2px solid #000;
-        border-right: 1px solid #e8e822;
-        border-left: 1px solid #e8e822;
+        border-right: 1px solid #000;
+        border-left: 1px solid #000;
         height: 40px;
+        z-index: -1;
       }
 
       .tab-content {
@@ -55,8 +63,10 @@
   </head>
   <body>
     <div class="tab-container">
-      <div class="tab-links"></div>
-      <div class="tab-content"></div>
+      <div style="height: 60px;">
+        <div class="tab-links"></div>
+      </div>
+      <div class="tab-content"></div>      
     </div>
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
